@@ -20,54 +20,59 @@ if (menuButton && navigation) {
 
 const heroCarousel = document.querySelector('.hero-slideshow');
 const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
-const slideDots = Array.from(document.querySelectorAll('.slide-dot'));
 const slideIndex = document.querySelector('.slide-index');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let activeSlide = 0;
 let slideTimer = 0;
 
+function clearSlideTimer() {
+  window.clearTimeout(slideTimer);
+  slideTimer = 0;
+}
+
 function showSlide(index) {
   if (!heroSlides.length) return;
+  clearSlideTimer();
+  const previousSlide = heroSlides[activeSlide];
+  if (previousSlide?.tagName === 'VIDEO') {
+    previousSlide.pause();
+    previousSlide.currentTime = 0;
+  }
   activeSlide = (index + heroSlides.length) % heroSlides.length;
   heroSlides.forEach((slide, position) => {
     const isActive = position === activeSlide;
     slide.classList.toggle('is-active', isActive);
     slide.setAttribute('aria-hidden', String(!isActive));
   });
-  slideDots.forEach((dot, position) => {
-    const isCurrent = position === activeSlide;
-    dot.classList.toggle('is-current', isCurrent);
-    dot.setAttribute('aria-pressed', String(isCurrent));
-  });
-  if (slideIndex) slideIndex.textContent = `0${activeSlide + 1} / 0${heroSlides.length}`;
+  if (slideIndex) {
+    slideIndex.textContent = `${String(activeSlide + 1).padStart(2, '0')} / ${String(heroSlides.length).padStart(2, '0')}`;
+  }
+  startSlideshow();
 }
 
 function stopSlideshow() {
-  window.clearInterval(slideTimer);
-  slideTimer = 0;
+  clearSlideTimer();
+  const activeItem = heroSlides[activeSlide];
+  if (activeItem?.tagName === 'VIDEO') activeItem.pause();
 }
 
 function startSlideshow() {
-  stopSlideshow();
+  clearSlideTimer();
   if (!heroSlides.length || prefersReducedMotion.matches || document.hidden) return;
-  slideTimer = window.setInterval(() => showSlide(activeSlide + 1), 6500);
+  const activeItem = heroSlides[activeSlide];
+  const isVideo = activeItem?.tagName === 'VIDEO';
+  let delay = 6500;
+  if (isVideo) {
+    if (activeItem.ended || activeItem.currentTime >= 10) activeItem.currentTime = 0;
+    delay = Math.max(250, (10 - activeItem.currentTime) * 1000);
+    activeItem.play().catch(() => {});
+  }
+  slideTimer = window.setTimeout(() => showSlide(activeSlide + 1), delay);
 }
 
 if (heroCarousel && heroSlides.length) {
-  heroCarousel.querySelector('[data-slide-prev]')?.addEventListener('click', () => {
-    showSlide(activeSlide - 1);
-    startSlideshow();
-  });
-  heroCarousel.querySelector('[data-slide-next]')?.addEventListener('click', () => {
-    showSlide(activeSlide + 1);
-    startSlideshow();
-  });
-  slideDots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      showSlide(Number(dot.dataset.slideTo));
-      startSlideshow();
-    });
-  });
+  heroCarousel.querySelector('[data-slide-prev]')?.addEventListener('click', () => showSlide(activeSlide - 1));
+  heroCarousel.querySelector('[data-slide-next]')?.addEventListener('click', () => showSlide(activeSlide + 1));
   heroCarousel.addEventListener('mouseenter', stopSlideshow);
   heroCarousel.addEventListener('mouseleave', startSlideshow);
   heroCarousel.addEventListener('focusin', stopSlideshow);
