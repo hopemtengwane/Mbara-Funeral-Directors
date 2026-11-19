@@ -22,3 +22,13 @@ The first design uses online directory entries as provisional details:
 Please confirm both addresses and numbers with the business before publishing. The site intentionally does not advertise funeral cover or insurance products, specific packages, opening hours, or services beyond general funeral arrangement guidance. Confirm any service wording with the company before making the website public.
 
 The company logo in `assets/mbara-logo.png` was supplied for this site. The hero illustration is original CSS artwork.
+
+## Photography
+
+The hero and two remembrance panels use photographs hosted by Pexels, by Pavel Danilyuk:
+
+- [Flowers on the Chair](https://www.pexels.com/photo/flowers-on-the-chair-7317676/)
+- [Flowers Near the Wooden Coffin](https://www.pexels.com/photo/flowers-near-the-wooden-coffin-7317669/)
+- [White Flowers on the Floor](https://www.pexels.com/photo/white-flowers-on-the-floor-7317673/)
+
+Pexels lists these as free to use. See the [Pexels License](https://www.pexels.com/legal-pages/license/). The images load from the Pexels CDN.
