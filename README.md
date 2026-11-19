@@ -21,4 +21,4 @@ The first design uses online directory entries as provisional details:
 
 Please confirm both addresses and numbers with the business before publishing. The site intentionally does not advertise funeral cover or insurance products, specific packages, opening hours, or services beyond general funeral arrangement guidance. Confirm any service wording with the company before making the website public.
 
-The current hero illustration is original CSS artwork, so there are no third-party image assets to license or update.
+The company logo in `assets/mbara-logo.png` was supplied for this site. The hero illustration is original CSS artwork.
