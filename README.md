@@ -32,3 +32,6 @@ The hero and two remembrance panels use photographs hosted by Pexels, by Pavel D
 - [White Flowers on the Floor](https://www.pexels.com/photo/white-flowers-on-the-floor-7317673/)
 
 Pexels lists these as free to use. See the [Pexels License](https://www.pexels.com/legal-pages/license/). The images load from the Pexels CDN.
+
+
+Casket cutout images are reused from the user's Laphumikhwezi website project at the user's request. They are presented as illustrative examples, not as a claim of Mbara stock or pricing.

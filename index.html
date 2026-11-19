@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#15153d">
   <meta name="description" content="Mbara Funeral Directors — compassionate funeral arrangement support in Cradock and Komani, Eastern Cape.">
   <title>Mbara Funeral Directors | Here for your family</title>
-  <link rel="icon" href="assets/mbara-logo.png?v=brand-20261119" type="image/png">
+  <link rel="icon" href="assets/mbara-logo.png?v=brand-large-20261119" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=photos-fonts-20261119">
+  <link rel="stylesheet" href="styles.css?v=carousel-gallery-20261119">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -18,12 +18,13 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#home" aria-label="Mbara Funeral Directors home">
-        <img class="brand-logo" src="assets/mbara-logo.png?v=brand-20261119" alt="Mbara Funeral Directors" width="240" height="80">
+        <img class="brand-logo" src="assets/mbara-logo.png?v=brand-large-20261119" alt="Mbara Funeral Directors" width="300" height="101">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="#our-approach">Our approach</a>
         <a href="#arrangements">Arrangements</a>
+        <a href="#coffins">Coffins &amp; caskets</a>
         <a href="#locations">Our locations</a>
         <a class="nav-contact" href="#locations">Contact us</a>
       </nav>
@@ -42,8 +43,21 @@
         </div>
         <div class="hero-note"><span class="note-rule"></span><span>Serving families in the Eastern Cape</span></div>
       </div>
-      <div class="hero-art hero-photo" aria-label="A softly lit funeral setting with flowers and candles" role="img">
-        <div class="art-caption"><span>WITH CARE</span><span class="caption-line"></span><span>WITH RESPECT</span></div>
+      <div class="hero-art hero-slideshow" role="region" aria-roledescription="carousel" aria-label="Mbara Funeral Directors photo slideshow">
+        <img class="hero-slide is-active" src="assets/hero-setup.jpg?v=carousel-20261119" alt="A memorial tent dressed in orange and white for a service" aria-hidden="false">
+        <img class="hero-slide" src="assets/hero-hearse.jpg?v=carousel-20261119" alt="A funeral vehicle prepared for a service" aria-hidden="true">
+        <img class="hero-slide" src="assets/hero-service.jpg?v=carousel-20261119" alt="A funeral gathering beneath a tent" aria-hidden="true">
+        <div class="art-caption" aria-hidden="true"><span>WITH CARE</span><span class="caption-line"></span><span>WITH RESPECT</span></div>
+        <div class="hero-slider-controls" aria-label="Slideshow controls">
+          <button class="slide-arrow" type="button" data-slide-prev aria-label="Previous slide">‹</button>
+          <div class="slide-pagination" aria-label="Choose a slide">
+            <button class="slide-dot is-current" type="button" data-slide-to="0" aria-label="Show slide 1 of 3" aria-pressed="true"></button>
+            <button class="slide-dot" type="button" data-slide-to="1" aria-label="Show slide 2 of 3" aria-pressed="false"></button>
+            <button class="slide-dot" type="button" data-slide-to="2" aria-label="Show slide 3 of 3" aria-pressed="false"></button>
+          </div>
+          <span class="slide-index" aria-hidden="true">01 / 03</span>
+          <button class="slide-arrow" type="button" data-slide-next aria-label="Next slide">›</button>
+        </div>
       </div>
       <div class="hero-bottom"><span>CRADOCK</span><span class="bottom-divider"></span><span>KOMANI</span><span class="bottom-spacer"></span><span>MBARA FUNERAL DIRECTORS</span></div>
     </section>
@@ -85,6 +99,25 @@
       </div>
     </section>
 
+    <section class="coffin-collection" id="coffins">
+      <div class="coffin-inner">
+        <div class="section-kicker"><span>03</span><span class="kicker-line"></span><span>COFFINS &amp; CASKETS</span></div>
+        <div class="collection-heading">
+          <h2>Thoughtful choices<br>for a <em>meaningful farewell.</em></h2>
+          <p>View a few example finishes and styles. Our team can talk through the options currently available for your family.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card"><div class="product-stage"><button class="product-open" type="button" data-open-product aria-label="View full-size image: Polished timber coffin or casket"><img class="product-cutout" src="assets/casket-polished-timber.webp?v=caskets-20261119" alt="Polished timber coffin or casket example" loading="lazy"><span class="product-open-label">View image</span></button></div><div class="product-card-copy"><h3>Polished timber</h3><p>A warm woodgrain finish with shaped detailing.</p></div></article>
+          <article class="product-card"><div class="product-stage"><button class="product-open" type="button" data-open-product aria-label="View full-size image: White and timber coffin or casket"><img class="product-cutout" src="assets/casket-white-and-timber.webp?v=caskets-20261119" alt="White and timber coffin or casket example" loading="lazy"><span class="product-open-label">View image</span></button></div><div class="product-card-copy"><h3>White and timber</h3><p>A light finish paired with a wood-tone lid.</p></div></article>
+          <article class="product-card"><div class="product-stage"><button class="product-open" type="button" data-open-product aria-label="View full-size image: Silver finish coffin or casket"><img class="product-cutout" src="assets/casket-silver-finish.webp?v=caskets-20261119" alt="Silver finish coffin or casket example" loading="lazy"><span class="product-open-label">View image</span></button></div><div class="product-card-copy"><h3>Silver finish</h3><p>A silver-grey finish with polished metal fittings.</p></div></article>
+          <article class="product-card"><div class="product-stage"><button class="product-open" type="button" data-open-product aria-label="View full-size image: Open timber finish coffin or casket"><img class="product-cutout" src="assets/casket-open-timber.webp?v=caskets-20261119" alt="Open timber finish coffin or casket example" loading="lazy"><span class="product-open-label">View image</span></button></div><div class="product-card-copy"><h3>Open timber finish</h3><p>A timber finish with a light, gathered interior.</p></div></article>
+          <article class="product-card"><div class="product-stage"><button class="product-open" type="button" data-open-product aria-label="View full-size image: White casket"><img class="product-cutout" src="assets/casket-white-display.webp?v=caskets-20261119" alt="White casket example" loading="lazy"><span class="product-open-label">View image</span></button></div><div class="product-card-copy"><h3>White casket</h3><p>A clean white finish with bright metal fittings.</p></div></article>
+          <article class="product-card"><div class="product-stage"><button class="product-open" type="button" data-open-product aria-label="View full-size image: Blue and burgundy coffin or casket"><img class="product-cutout" src="assets/casket-red-blue.webp?v=caskets-20261119" alt="Burgundy and blue coffin or casket example" loading="lazy"><span class="product-open-label">View image</span></button></div><div class="product-card-copy"><h3>Burgundy and blue</h3><p>A polished burgundy exterior with a blue lid panel.</p></div></article>
+        </div>
+        <p class="product-note">These images are examples and may not reflect current stock. Please contact a branch to confirm available styles, finishes and pricing.</p>
+      </div>
+    </section>
+
     <section class="parallax-band parallax-flowers" aria-label="White flowers at a remembrance service">
       <div class="parallax-copy">
         <p class="eyebrow"><span></span> SPACE TO REMEMBER</p>
@@ -93,7 +126,7 @@
     </section>
 
     <section class="steps-section section-wrap">
-      <div class="steps-heading"><div class="section-kicker"><span>03</span><span class="kicker-line"></span><span>WHEN YOU NEED US</span></div><h2>One step at a <em>time.</em></h2><p>You do not need to have everything figured out before you call. We can start with what you know.</p></div>
+      <div class="steps-heading"><div class="section-kicker"><span>04</span><span class="kicker-line"></span><span>WHEN YOU NEED US</span></div><h2>One step at a <em>time.</em></h2><p>You do not need to have everything figured out before you call. We can start with what you know.</p></div>
       <div class="steps-grid">
         <article class="step"><span class="step-number">01</span><div class="step-icon icon-phone" aria-hidden="true">⌕</div><h3>Reach out</h3><p>Call the branch nearest to your family and let us know how we can help.</p></article>
         <article class="step"><span class="step-number">02</span><div class="step-icon icon-talk" aria-hidden="true">☏</div><h3>Talk it through</h3><p>We will listen, answer your questions and discuss the arrangements.</p></article>
@@ -103,7 +136,7 @@
 
     <section class="locations-section" id="locations">
       <div class="section-wrap locations-inner">
-        <div class="locations-heading"><div><div class="section-kicker"><span>04</span><span class="kicker-line"></span><span>FIND YOUR LOCAL BRANCH</span></div><h2>Close to <em>home.</em></h2></div><p>Speak with a local team about funeral arrangements for your family.</p></div>
+        <div class="locations-heading"><div><div class="section-kicker"><span>05</span><span class="kicker-line"></span><span>FIND YOUR LOCAL BRANCH</span></div><h2>Close to <em>home.</em></h2></div><p>Speak with a local team about funeral arrangements for your family.</p></div>
         <div class="branch-grid">
           <article class="branch-card"><div class="branch-top"><span class="branch-label">EASTERN CAPE</span><span class="branch-pin" aria-hidden="true">⌖</span></div><h3>Cradock</h3><p class="branch-address">46 Adderley Street<br>Cradock, 5880</p><a class="branch-phone" href="tel:+27422050255">042 205 0255</a><a class="branch-call" href="tel:+27422050255">Call Cradock branch <span aria-hidden="true">↗</span></a></article>
           <article class="branch-card branch-card-dark"><div class="branch-top"><span class="branch-label">EASTERN CAPE</span><span class="branch-pin" aria-hidden="true">⌖</span></div><h3>Komani</h3><p class="branch-address">24 Bushell Street<br>Komani, 5320</p><a class="branch-phone" href="tel:+27822195145">082 219 5145</a><a class="branch-call" href="tel:+27822195145">Call Komani branch <span aria-hidden="true">↗</span></a></article>
@@ -118,6 +151,10 @@
       <h2>We are here to<br>help you <em>through.</em></h2>
       <a class="button button-outline" href="#locations">Find a branch</a>
     </section>
+    <dialog class="product-viewer" id="product-viewer" aria-label="Coffin or casket example">
+      <form method="dialog"><button class="product-viewer-close" type="submit" aria-label="Close full-size image">Close</button></form>
+      <img id="product-viewer-image" alt="">
+    </dialog>
   </main>
 
   <footer class="site-footer">
